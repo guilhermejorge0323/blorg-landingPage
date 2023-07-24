@@ -1,3 +1,105 @@
-body{
-    background-color: red;
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+
+:root{
+    --ligth-red: #ff525d;
+    --very-light-red: #ff7a85;
+    --very-dark-blue :#1f3f5b;
+    --grayish-blue: #c8c8cb;
+    --very-dark-grayish-blue: #4b5862;
+    --very-dark-black-blue: #25252d;
+}
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-size: 16px;
+    font-family: 'Ubuntu';
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Overpass';
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul li{
+    list-style: none;
+}
+
+/****Header****/
+header{
+    color: white;
+    height: 70vh;
+    width: 100vw;
+    background-image: url('../img/bg-pattern-intro-desktop.svg'),linear-gradient(75deg,#ff8f70,#ff3d54);
+    background-position: 25% 53%;
+    background-repeat: no-repeat;
+    padding: 40px 0;
+}
+
+/**Navbar**/
+
+header nav{
+    display: flex;
+    align-items: center;
+    max-height: 40px;
+}
+
+header nav #menus-nav{
+    width: 100%;
+    display: flex;
+}
+
+header nav #area-menus-nav{
+    width: 75%;
+}
+
+header nav #area-menus-nav ul{
+    display: flex;
+    margin: 0 0 0 50px;
+}
+
+header nav #area-menus-nav ul li {
+    margin: 0 15px;
+}
+
+header nav #area-menus-nav ul li a{
+    color: white;
+}
+
+header nav #area-menus-nav ul li a::after{
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-image: url('../img/icon-arrow-light.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 10px;
+}
+
+header nav #area-login-nav{
+    width: 25%;
+}
+
+
+
+/* responsivo */
+
+
