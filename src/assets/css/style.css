@@ -62,7 +62,6 @@ header{
 
 header nav{
     display: flex;
-    align-items: center;
     max-height: 40px;
 }
 
@@ -73,16 +72,16 @@ header nav #menus-nav{
 
 header nav #area-menus-nav{
     width: 75%;
-    position: absolute;
 }
 
 header nav #area-menus-nav ul{
     display: flex;
+    position: absolute;
+    top: 30%;
     margin: 0 0 0 50px;
 }
 
 header nav #area-menus-nav ul li {
-    
     height: auto;
     width: 150px;
 }
@@ -104,6 +103,14 @@ header nav #area-menus-nav ul li a.link-nav::after{
     background-repeat: no-repeat;
     background-position: center;
     margin-left: 10px;
+}
+
+header nav #area-menus-nav ul li:hover a.link-nav::after{
+    transform: rotate(180deg) !important;
+    -webkit-transform: rotate(180deg) !important;
+    -moz-transform: rotate(180deg) !important;
+    -ms-transform: rotate(180deg) !important;
+    -o-transform: rotate(180deg) !important;
 }
 
 header nav #area-menus-nav ul li .dropdown-menu{
@@ -139,6 +146,9 @@ header nav #area-menus-nav ul li .dropdown-menu a:hover{
 
 header nav #area-login-nav{
     width: 25%;
+    display: flex;
+    align-items: center;
+    background-color: red;
 }
 
 
