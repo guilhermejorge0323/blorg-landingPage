@@ -7,6 +7,11 @@
 }
 
 
+html{
+    overflow-x: hidden;
+}
+
+
 :root{
     --ligth-red: #ff525d;
     --very-light-red: #ff7a85;
@@ -45,6 +50,12 @@ ul li{
     list-style: none;
 }
 
+button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
 /****Header****/
 header{
     color: white;
@@ -54,7 +65,6 @@ header{
     background-position: 25% 53%;
     background-repeat: no-repeat;
     padding: 40px 0;
-    
 }
 
 /**Navbar**/
@@ -65,9 +75,17 @@ header nav{
     max-height: 40px;
 }
 
+header nav img{
+    background-color: transparent;
+}
+
 header nav #menus-nav{
     width: 100%;
     display: flex;
+}
+
+header nav #menus-nav a{
+    color: white;
 }
 
 header nav #area-menus-nav{
@@ -82,13 +100,9 @@ header nav #area-menus-nav ul{
 }
 
 header nav #area-menus-nav ul li {
-    height: auto;
     width: 150px;
 }
 
-header nav #area-menus-nav ul li a.link-nav{
-    color: white;
-}
 
 header nav #area-menus-nav ul li a.link-nav:hover{
     text-decoration: underline !important;
@@ -114,14 +128,12 @@ header nav #area-menus-nav ul li:hover a.link-nav::after{
 }
 
 header nav #area-menus-nav ul li .dropdown-menu{
+    position: relative;
     visibility: hidden;
-    position: absolute;
-    display: flex;
     width: 150px;
-    flex-direction: column;
+    padding: 20px;
     background-color: white;
     top: 30px;
-    padding: 20px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -132,12 +144,12 @@ header nav #area-menus-nav ul li .dropdown-menu{
 
 header nav #area-menus-nav ul li:hover .dropdown-menu{
     visibility: visible;
-    position: relative;
 }
 
 header nav #area-menus-nav ul li .dropdown-menu a{
     color: black;
     padding: 10px 0;
+    display: block;
 }
 
 header nav #area-menus-nav ul li .dropdown-menu a:hover{
@@ -148,7 +160,33 @@ header nav #area-login-nav{
     width: 25%;
     display: flex;
     align-items: center;
-    background-color: red;
+    justify-content: flex-end;
+}
+
+header nav #area-login-nav button{
+    padding: 15px 30px;
+    background-color: rgba(255,255,255,1);
+    font-weight: bold;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    color: var(--ligth-red);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    -ms-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+header nav #area-login-nav button:hover {
+    color: white !important;
+    background-color: rgba(255,255,255,0.3);
+}
+
+header nav #area-login-nav a{
+    margin-right: 15px ;
 }
 
 
@@ -159,12 +197,86 @@ header nav #area-login-nav{
         min-width: 0px;
     }
 
-    #area-menus-nav{
-        display: none;
-    }
-
     header{
-        min-width: 100vh;
+        min-width: 100vw;
+        max-width: 100vw;
+        background-image: url('../img/bg-pattern-intro-mobile.svg'), linear-gradient(75deg,#ff8f70,#ff3d54);
     }
-}
 
+    header nav{
+        justify-content: space-between;
+    }
+
+    header nav #menus-nav{
+        position: absolute;
+        background-color: white;
+        flex-direction: column;
+        top: 170%;
+        padding: 30px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+
+    header nav #area-menus-nav{
+        width: 100%;
+    }
+
+    header nav #area-menus-nav ul{
+        position: relative;
+        flex-direction: column;
+        margin: 0 0 0 0 !important;
+        top: 0;
+        align-items: center;
+    }
+
+    header nav #area-menus-nav ul li{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: bold;
+        padding: 15px 0;
+    }
+
+    header nav #area-menus-nav ul li a{
+        color: var(--very-dark-blue);
+        font-size: 1.2em;
+    }
+
+    header nav #area-menus-nav ul li a.link-nav::after{
+        background-image: url('../img/icon-arrow-dark.svg');
+    }
+
+    header nav #area-menus-nav ul li .dropdown-menu{
+        padding: 0px;
+        width: 100%;
+        overflow: hidden;
+        max-height: 0px;
+        top: 25px;
+        transition: max-height 0.7s ease-in-out;
+        -webkit-transition: max-height 0.7s ease-in-out;
+        -moz-transition: max-height 0.7s ease-in-out;
+        -ms-transition: max-height 0.7s ease-in-out;
+        -o-transition: max-height 0.7s ease-in-out;
+        background-color:  #f5f4f8;
+        justify-content: center;
+        box-shadow: none;
+        visibility: visible;
+    }
+
+    header nav #area-menus-nav ul li .dropdown-menu.ativo{
+        max-height: 300px;
+    }
+
+    header nav #area-menus-nav ul li .dropdown-menu a{
+        font-family: 'Overpass';
+        text-align: center;
+        padding: 15px 0;
+        font-weight: bold;
+        color: #5a5858 !important
+    }
+
+}
