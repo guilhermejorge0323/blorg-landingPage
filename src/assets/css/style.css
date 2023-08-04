@@ -8,7 +8,7 @@
 
 
 html{
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 
@@ -65,6 +65,7 @@ header{
     background-position: 25% 53%;
     background-repeat: no-repeat;
     padding: 40px 0;
+    border-end-start-radius: 80px;
 }
 
 /**Navbar**/
@@ -189,17 +190,31 @@ header nav #area-login-nav a{
     margin-right: 15px ;
 }
 
+nav #button-burger{
+    visibility: hidden;
+}
 
 
-/* responsivo */
-@media (max-width: 1188px) {
+
+/* responsivo vertical */
+@media (max-width: 1280px) {
+    html.menu-active{
+        overflow-y: hidden !important;
+        overflow-x: hidden;
+    }
+
     body{
         min-width: 0px;
+    }
+
+    .container{
+        width: 90%;
     }
 
     header{
         min-width: 100vw;
         max-width: 100vw;
+        height: 80vh;
         background-image: url('../img/bg-pattern-intro-mobile.svg'), linear-gradient(75deg,#ff8f70,#ff3d54);
     }
 
@@ -208,20 +223,31 @@ header nav #area-login-nav a{
     }
 
     header nav #menus-nav{
+        right: -110%;
+        overflow: auto;
+        box-shadow: 0 10px 15px 5px rgba(0,0,0,0.1);
         position: absolute;
         background-color: white;
         flex-direction: column;
-        top: 170%;
+        top: 130%;
         padding: 30px;
         border-radius: 5px;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         -ms-border-radius: 5px;
         -o-border-radius: 5px;
-    }
+        font-size: max(2.5vw,1em);
+        max-height: 800px;
+        transition: right 1s ease-in-out;
+        -webkit-transition: right 1s ;
+        -moz-transition: right 1s ;
+        -ms-transition: right 1s ;
+        -o-transition: right 1s ;
+}
 
     header nav #area-menus-nav{
         width: 100%;
+        padding: 0px 0 0 0;
     }
 
     header nav #area-menus-nav ul{
@@ -243,7 +269,6 @@ header nav #area-login-nav a{
 
     header nav #area-menus-nav ul li a{
         color: var(--very-dark-blue);
-        font-size: 1.2em;
     }
 
     header nav #area-menus-nav ul li a.link-nav::after{
@@ -251,32 +276,64 @@ header nav #area-login-nav a{
     }
 
     header nav #area-menus-nav ul li .dropdown-menu{
-        padding: 0px;
+        visibility: hidden;
+        padding: 0px 0;
         width: 100%;
         overflow: hidden;
         max-height: 0px;
         top: 25px;
-        transition: max-height 0.7s ease-in-out;
-        -webkit-transition: max-height 0.7s ease-in-out;
-        -moz-transition: max-height 0.7s ease-in-out;
-        -ms-transition: max-height 0.7s ease-in-out;
-        -o-transition: max-height 0.7s ease-in-out;
+        transition: max-height 0.8s ease-in-out;
+        -webkit-transition: max-height 0.8s ease-in-out;
+        -moz-transition: max-height 0.8s ease-in-out;
+        -ms-transition: max-height 0.8s ease-in-out;
+        -o-transition: max-height 0.8s ease-in-out;
         background-color:  #f5f4f8;
         justify-content: center;
         box-shadow: none;
         visibility: visible;
-    }
+}
 
     header nav #area-menus-nav ul li .dropdown-menu.ativo{
-        max-height: 300px;
+        max-height: 500px;
     }
 
     header nav #area-menus-nav ul li .dropdown-menu a{
         font-family: 'Overpass';
         text-align: center;
-        padding: 15px 0;
+        padding: 25px 0;
         font-weight: bold;
         color: #5a5858 !important
     }
 
+    header nav #menus-nav #area-login-nav{
+        border-top: 2px solid var(--grayish-blue);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    header nav #menus-nav #area-login-nav a{
+        color: var(--very-dark-black-blue);
+        font-weight: bold;
+        margin: 30px 0 20px 0;
+    }
+
+
+    header nav #menus-nav #area-login-nav button{
+        background-image: linear-gradient(75deg,#ff8f70,#ff3d54);
+        color: white;
+    }
+
+    header nav #menus-nav.ativo{
+        right: 0;
+    }
+
+    nav #button-burger{
+        visibility: visible !important;
+    }
+
 }
+
+
+/* Responsivo horizontal */
