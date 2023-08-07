@@ -215,7 +215,7 @@ header #box-content-head{
 }
 
 header .container #header-content h1{
-    font-size: min(3em,8vw);
+    font-size: min(3em,10vw);
     text-align: center;
 }
 
@@ -268,7 +268,7 @@ main #main-content1{
     display: grid;
     position: relative;
     grid-template-columns: 50% 50%;
-    grid-template-areas: 'text-main1 image-main1';
+    grid-template-areas: 'text-main1 image-main1  ';
     height: 100vh;
 }
 
@@ -293,7 +293,7 @@ main .text-main p {
 }
 
 main #main-content1 #area-text1{
-    grid-area: 'text-main1';
+    grid-area: text-main1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -312,14 +312,13 @@ main #main-content1 #area-text1 p{
 
 
 main #main-content1 #area-image1{
-    grid-area: 'image-main1';
+    grid-area: image-main1;
     position: relative;
 }
 
 main #main-content1 #area-image1 img{
     position: relative;
     right: -15%;
-
 }
 
 /* responsivo*/
@@ -469,5 +468,40 @@ main #main-content1 #area-image1 img{
         align-items: start;
         justify-content: center;
         padding-top: 20vh;
+    }
+
+    /* Conteudo main */
+    main #main-content1{
+        grid-template-columns: 100% 100%;
+        grid-template-areas:
+        "title-main1"
+        "image-main1"
+         "text-main1" !important;
+    }
+
+    main #main-content1 h1{
+        grid-area: title-main1;
+        position: relative;
+        text-align: center;
+        left: 0;
+     }
+
+    main #main-content1 #area-image1{
+        margin: 50px 0;
+    }
+
+    main #main-content1 #area-image1 img{
+        position: relative;
+        width: 100%;
+        right: 0%;
+        position: relative;
+    }
+
+    main .text-main h1{
+        text-align: center !important;
+    }
+
+    main .text-main p{
+        text-align: center !important;
     }
 }
