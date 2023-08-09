@@ -27,7 +27,7 @@ body{
     height: 100vh;
     font-size: 16px;
     font-family: 'Ubuntu';
-    min-width: 1200px;
+    min-width: 1380px;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -368,6 +368,30 @@ main #main-content2 .container #area-text2 .text-main h1{
 }
 
 
+/* Conteudo main 3 */
+main #main-content3{
+    margin-top: 25vh;
+}
+
+main #main-content3 .container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+main #main-content3 .container #area-image3 img{
+    position: relative;
+    left: -70%;
+}
+
+main #main-content3 .container #area-text3{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main #main-content3 .container #area-text3 p{
+    color: var(--very-dark-grayish-blue);
+}
 
 /* responsivo*/
 @media (max-width: 1280px) {
@@ -552,4 +576,29 @@ main #main-content2 .container #area-text2 .text-main h1{
     main .text-main p{
         text-align: center !important;
     }
+
+    /* Conteudo main 2 */
+
+    main #main-content2{
+        height: auto;
+        background-image: linear-gradient(290deg,hsl(237, 23%, 32%),hsl(237, 17%, 21%));
+    }
+
+    main #main-content2 .container{
+        grid-template-areas:
+        "area-img2"
+        "area-text2";
+        grid-template-columns: 100% 100%;
+        grid-template-rows: 50% 50%;
+    }
+
+    main #main-content2 .container #area-image2 img{
+        position: relative;
+        width: 100%;
+    }
+
+    main #main-content2 .container #area-text2 .text-main{
+        font-size: 3vw;
+    }
+
 }

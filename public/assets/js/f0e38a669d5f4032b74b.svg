@@ -1,0 +1,7 @@
+<svg width="507" height="509" xmlns="http://www.w3.org/2000/svg">
+  <g transform="matrix(1 0 0 -1 0 509)" fill="none" fill-rule="evenodd">
+    <rect fill="#3E4062" x="106.5" y="107" width="294" height="295" rx="147"/>
+    <rect stroke="#878D92" opacity=".5" x=".25" y=".25" width="506.5" height="508.5" rx="253.25"/>
+    <rect stroke="#878D92" x="85.25" y="85.75" width="336.5" height="337.5" rx="168.25"/>
+  </g>
+</svg>
