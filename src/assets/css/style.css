@@ -122,7 +122,7 @@ header nav #area-menus-nav ul{
 }
 
 header nav #area-menus-nav ul li {
-    width: 150px;
+    width: 20%;
 }
 
 
@@ -152,7 +152,7 @@ header nav #area-menus-nav ul li:hover a.link-nav::after{
 header nav #area-menus-nav ul li .dropdown-menu{
     position: relative;
     visibility: hidden;
-    width: 150px;
+    width: 100%;
     padding: 20px;
     background-color: white;
     top: 30px;
@@ -231,7 +231,7 @@ header .container #header-content #buttons-header-content{
 }
 
 header .container #header-content #buttons-header-content button{
-    width: min(150px,50vw);
+    width: 10vw;
     padding: 15px 10px;
     margin: 0 10px;
 }
@@ -426,6 +426,71 @@ footer section a{
 
 
 /* responsivo*/
+
+/* Telas grandes */
+@media (min-width: 3200px) {
+    header nav{
+        font-size: 0.6vw;
+    }
+
+    header nav #area-menus-nav ul li .dropdown-menu{
+        width: 50%;
+    }
+
+    header .container #header-content h1{
+        font-size: 2vw !important;
+    }
+
+    header .container #header-content p{
+        font-size: 0.7vw !important;
+    }
+
+    header .container #header-content #buttons-header-content button{
+        font-size: 0.6vw;
+    }
+
+    /* Main */
+    main #main-content1 h1{
+        font-size: 1.5vw !important;
+    }
+
+    main .text-main h1{
+        font-size: 1.2vw !important;
+    }
+
+    main #main-content1 #area-text1 h1{
+        font-size: 1.2vw !important;
+    }
+
+    main .text-main p{
+        font-size: 0.7vw;
+    }
+
+    main #main-content1 #area-image1 img{
+        width: 50vw;
+        height: 50vw;
+        right: -32%;
+    }
+
+    main #main-content2{
+        background-image: linear-gradient(290deg,hsl(237, 23%, 32%),hsl(237, 17%, 21%));
+        background-position: 0 0;
+    }
+
+    main #main-content2 .container #area-image2 img{
+        width: 30vw;
+        height: 30vw;
+    }
+
+    main #main-content3 .container #area-image3 img{
+        width: 40vw;
+        height: 30vw;
+        left: -58%;
+    }
+}
+
+
+/* Dispositivos moveis */
 @media (max-width: 1280px) {
     html.menu-active{
         overflow-y: hidden !important;
@@ -573,6 +638,10 @@ footer section a{
         align-items: start;
         justify-content: center;
         padding-top: 20vh;
+    }
+
+    header .container #header-content #buttons-header-content button{
+        width: 45vw !important;
     }
 
     /* Conteudo main */
